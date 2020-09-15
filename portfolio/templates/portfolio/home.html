@@ -1,0 +1,37 @@
+{% extends 'portfolio/base.html' %}
+{% load static %}
+{% block content %}
+
+
+<div class="row justify-content-center my-3">
+  <div class="col-5">
+<img src="{% static 'portfolio/SuitsMe.JPG' %}" class="img-fluid" >
+  </div>
+</div>
+<div class="row justify-content-center mb-3">
+  <div class="col-md-9 text-center">
+    <h1 id="hometext" class="font-weight-bold">Welcome to the website of Akash Guha 😊</h1>
+  </div>
+</div>
+
+<h2 class="mt-5">Portfolio</h2>
+<hr>
+<div class="row">
+{% for item in myproject %}
+    <div class="col-lg-4 col-md-6">    
+   
+        {% if item.url%}
+        <a href="{{ item.url }}" target="_blank" >
+              <img src="{{ item.image.url }}" class="img-fluid mb-2" >
+        </a>
+        
+        {% else %}
+        <img src="{{ item.image.url }}" class="img-fluid mb-2" >
+    {% endif %}
+        
+    <h3>{{ item.title }}</h3>
+    <p>{{ item.description }}</p>
+    </div>
+{% endfor %}
+</div>
+{% endblock %}
