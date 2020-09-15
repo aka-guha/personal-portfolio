@@ -3,11 +3,23 @@
 }
 
 .navbar-nav .nav-link:hover {
-    color: rgba(0,0,0,.5) !important;
+    color: rgba(0,80,255,.6) !important;
 }
-
+.btn:hover{
+    background-color: aliceblue;
+    color: black;
+}
 body {
     font-family: 'Lato', sans-serif;
+}
+
+#profilepic{
+    height: 300px;
+    width: 380px;
+}
+
+.col-5{
+    text-align: center;
 }
 
 #blogtitle {
